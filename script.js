@@ -91,15 +91,6 @@ for (let i = 1; i <= 100; i++) {
   }
   cells_section.append(rowDiv);
 }
-// if (localStorage.getItem("sheet") != "" && localStorage.getItem("sheet") != undefined) {
-//   data_obj = JSON.parse(localStorage.getItem("sheet"));
-
-//   for (x in data_obj) {
-//     let cell = document.querySelector(`[data-address=${x}]`);
-//     if(data_obj[x].value)
-//     cell.innerText = data_obj[x].value;
-//   }
-// }
 
 if (localStorage.getItem("sheet")) {
   data_obj = JSON.parse(localStorage.getItem("sheet"));

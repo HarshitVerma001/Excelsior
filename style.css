@@ -1,14 +1,17 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
+
 .container {
   height: 100vh;
   width: 100vw;
 }
+
 .icon {
   padding: 20px;
   height: 100%;
@@ -17,6 +20,7 @@ body {
   justify-content: left;
   width: 25%;
 }
+
 .users {
   height: 100%;
   width: 50%;
@@ -24,6 +28,7 @@ body {
   align-items: center;
   justify-content: right;
 }
+
 .saveicon {
   height: 4%;
   position: fixed;
@@ -32,6 +37,7 @@ body {
   align-items: center;
   justify-content: right;
 }
+
 .helpbtn {
   width: 8%;
   height: 100%;
@@ -41,6 +47,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .filebtn {
   width: 4%;
   height: 100%;
@@ -48,6 +55,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .clearicon {
   height: 4%;
   position: fixed;
@@ -56,6 +64,7 @@ body {
   align-items: center;
   justify-content: right;
 }
+
 .name {
   padding-left: 15px;
   height: 100%;
@@ -64,6 +73,7 @@ body {
   align-items: center;
   justify-content: left;
 }
+
 .title-bar {
   height: 4%;
   border-bottom: 1px solid;
@@ -80,9 +90,11 @@ body {
   align-items: center;
   background-color: white;
 }
+
 .menu-bar div {
   margin-left: 1rem;
 }
+
 .menu-options {
   background-color: white;
   height: 4%;
@@ -91,10 +103,12 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .formula-section {
   height: 4%;
   display: flex;
 }
+
 .formula-section .selected-cell-div {
   height: 100%;
   width: 20%;
@@ -105,6 +119,7 @@ body {
   justify-content: center;
   background-color: white;
 }
+
 .formula-section input {
   display: block;
   border: none;
@@ -112,15 +127,18 @@ body {
   height: 100%;
   width: 80%;
 }
+
 .grid {
   height: 80%;
   overflow: auto;
   position: relative;
 }
+
 .sheets-section {
   height: 4%;
   background-color: #2ecc71;
 }
+
 .blank-corner {
   height: 30px;
   width: 30px;
@@ -130,6 +148,7 @@ body {
   left: 0;
   z-index: 10;
 }
+
 .row-number-div {
   height: 30px;
   width: 30px;
@@ -139,6 +158,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .row-numbers-section {
   position: fixed;
   top: calc(16vh + 30px);
@@ -146,20 +166,20 @@ body {
   color: white;
   background-color: #107c41;
   z-index: -10;
-  /* why inline block?? */
 }
+
 .column-tags-section {
   z-index: -10;
   color: white;
   height: 30px;
   display: flex;
   align-items: center;
-  /* #107c41 */
   background-color: #107c41;
   position: fixed;
   top: 16%;
   left: 30px;
 }
+
 .column-tag {
   height: 100%;
   width: 80px;
@@ -170,6 +190,7 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .cells-section {
   height: calc(80vh - 30px);
   width: calc(100vw - 30px);
@@ -177,36 +198,39 @@ body {
   top: 30px;
   left: 30px;
   overflow: auto;
-  /* font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif; */
 }
+
 .fontsizeselect {
   text-align: center;
 }
+
 .cell {
   height: 30px;
   width: 80px;
   border-bottom: 0.5px solid gray;
   border-right: 0.5px solid gray;
   flex-shrink: 0;
-  /* font-family: "Times New Roman"; */
   outline: none;
   display: flex;
   align-items: center;
   justify-content: right;
   cursor: cell;
 }
+
 .row {
   display: flex;
 }
+
 .cell-selected {
   border: 2px solid rgb(0, 153, 255);
 }
+
 .menu-options div {
   border: 1px solid;
   height: 100%;
   width: 25%;
 }
+
 .bold-italics-underline,
 .align-cell-content,
 .font-type-size,
@@ -215,11 +239,12 @@ body {
   justify-content: space-evenly;
   align-items: center;
 }
-.menu-bar{
+
+.menu-bar {
   font-weight: 700;
 }
+
 .circle {
-  /* radius hai 12.5 pixels */
   height: 3.6vh;
   width: 3.6vh;
   position: relative;
@@ -228,19 +253,23 @@ body {
   color: white;
   font-weight: 900;
 }
+
 .name {
   font-weight: 900;
   color: gray;
   border: none;
 }
+
 .name:focus {
   outline: 2px solid rgb(0, 153, 255);
   border-radius: 2%;
 }
+
 .name:hover {
   outline: 0.25px solid gray;
   border-radius: 2%;
 }
+
 .bold,
 .italics,
 .underline,
