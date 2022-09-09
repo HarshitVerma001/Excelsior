@@ -122,6 +122,7 @@ body {
 
 .formula-section input {
   display: block;
+  /* remove outline and border when selected */
   border: none;
   outline: none;
   height: 100%;
@@ -130,6 +131,7 @@ body {
 
 .grid {
   height: 80%;
+  /* to make the cell overflow is the size exceeds given size */
   overflow: auto;
   position: relative;
 }
@@ -144,8 +146,12 @@ body {
   width: 30px;
   background-color: gray;
   position: fixed;
+  /* 4+4+8 */
   top: 16vh;
   left: 0;
+  /* give an random big z index to get on top */
+
+
   z-index: 10;
 }
 
@@ -162,10 +168,12 @@ body {
 .row-numbers-section {
   position: fixed;
   top: calc(16vh + 30px);
+  /* make row column section to size of inner div only instead of whole parent div size */
   display: inline-block;
   color: white;
   background-color: #107c41;
   z-index: -10;
+  /* why inline block?? */
 }
 
 .column-tags-section {
@@ -175,8 +183,11 @@ body {
   display: flex;
   align-items: center;
   background-color: #107c41;
+  /* give fixed posistion of top of view */
   position: fixed;
+  /* 4% title + 4% menu bar + 8% menu option */
   top: 16%;
+  /* 30 px of row-number section */
   left: 30px;
 }
 
@@ -198,6 +209,8 @@ body {
   top: 30px;
   left: 30px;
   overflow: auto;
+  /* font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif; */
 }
 
 .fontsizeselect {
@@ -210,6 +223,7 @@ body {
   border-bottom: 0.5px solid gray;
   border-right: 0.5px solid gray;
   flex-shrink: 0;
+  /* font-family: "Times New Roman"; */
   outline: none;
   display: flex;
   align-items: center;
@@ -245,6 +259,7 @@ body {
 }
 
 .circle {
+  /* radius hai 12.5 pixels */
   height: 3.6vh;
   width: 3.6vh;
   position: relative;
@@ -278,6 +293,7 @@ body {
 .clearicon,
 .helpbtn,
 .filebtn {
+  /* displays click type option on pointing over mouse cursor */
   cursor: pointer;
   padding: 5px;
 }

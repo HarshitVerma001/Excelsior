@@ -1,15 +1,23 @@
+// ------------ Alignment --------------------------
+
+// in the align cell content class, get all the span tag 
 let allAlignOptions = document.querySelectorAll(".align-cell-content span");
 let leftAlignbtn = allAlignOptions[0];
 let centerAlignbtn = allAlignOptions[1];
 let rightAlignbtn = allAlignOptions[2];
 
 leftAlignbtn.addEventListener("click", function (e) {
+  // apply setting on last highlighted cell if it exists
   if (last_highlighted_cell != undefined) {
+    // justify content on left
     last_highlighted_cell.style.justifyContent = "left";
+    // store the changes in cell object
+    // Note - Storage is for the cases when we store data using storage API so that we can use it later
     let address = last_highlighted_cell.getAttribute("data-address");
     data_obj[address].align = "left";
   }
 });
+
 centerAlignbtn.addEventListener("click", function (e) {
   if (last_highlighted_cell != undefined) {
     last_highlighted_cell.style.textAlign = "center";
@@ -18,6 +26,7 @@ centerAlignbtn.addEventListener("click", function (e) {
     data_obj[address].align = "center";
   }
 });
+
 rightAlignbtn.addEventListener("click", function (e) {
   if (last_highlighted_cell != undefined) {
     last_highlighted_cell.style.justifyContent = "right";
@@ -26,6 +35,8 @@ rightAlignbtn.addEventListener("click", function (e) {
   data_obj[address].align = "right";
 });
 
+
+// ------------ Alignment --------------------------
 let boldBtn = document.querySelector(".bold");
 let italicsBtn = document.querySelector(".italics");
 let underLineBtn = document.querySelector(".underline");
@@ -84,6 +95,7 @@ underLineBtn.addEventListener("click", function (e) {
     }
   }
 });
+
 let cells = document.querySelectorAll(".cell");
 let fb = document.querySelector(".formula-bar-div");
 for (let i = 0; i < cells.length; i++) {
@@ -108,6 +120,7 @@ for (let i = 0; i < cells.length; i++) {
     }
   });
 }
+
 let allCells = document.querySelector(".cells-section");
 let font_style_select = document.querySelector(".fontstyleselect");
 font_style_select.addEventListener("change", function (e) {
@@ -131,24 +144,35 @@ font_size_select.addEventListener("change", function (e) {
     font_size;
 });
 
+// ------------ Coloring --------------------------
+
 let body = document.querySelector("body");
 let bgcolor_selector = document.querySelector(".bgcolor");
 let textcolor_selector = document.querySelector(".textcolor");
+
+// -- background color--
+// on selecting bgColor icon, create a color picker and apply choosen color
 bgcolor_selector.addEventListener("click", function (e) {
+  // create a color picker input type and add to body and open it up by click
   let colorPicker = document.createElement("input");
   colorPicker.type = "color";
   body.append(colorPicker);
   colorPicker.click();
+
+  // add background color to last highlighted cell on selecting bgColor
   colorPicker.addEventListener("input", function (e) {
     let color_chosen = e.currentTarget.value;
     if (last_highlighted_cell != undefined) {
       last_highlighted_cell.style.backgroundColor = color_chosen;
+      // store the bgColor setting of curr cell to dataObj for future use of save
       data_obj[last_highlighted_cell.getAttribute("data-address")].bgcolor =
         color_chosen;
     }
   });
 });
 
+// -- font color --
+// on selecting font Color icon, create a color picker and apply choosen color
 textcolor_selector.addEventListener("click", function (e) {
   let colorPicker = document.createElement("input");
   colorPicker.type = "color";
@@ -164,12 +188,15 @@ textcolor_selector.addEventListener("click", function (e) {
   });
 });
 
+// ------------ Storage --------------------------
 let saveBtn = document.querySelector(".saveicon");
 saveBtn.addEventListener("click", function (e) {
+  // in local storage, save string with name of 'sheet'
   localStorage.setItem("sheet", JSON.stringify(data_obj));
 });
 
 let clearBtn = document.querySelector(".clearicon");
 clearBtn.addEventListener("click", function (e) {
+  // in local storage, update the stored 'sheet' as empty string
   localStorage.setItem("sheet", "");
 });
