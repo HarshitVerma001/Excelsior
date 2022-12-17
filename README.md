@@ -5,7 +5,7 @@
 ## **1. Methodology**
 
 1. Value is inserted in the cell
-2. Value can be cut, copied or pasted.
+2. Value can be cut, copied or pasted
 3. Formula is written by user in the formula bar for evaluation
 4. Formula is evaluated by extracting the parent and child cells
 5. This creates a dependency graph which tells the order of value updation
