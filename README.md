@@ -1,8 +1,10 @@
 
 # **Title: Excelsior**
 
+## **1. Live link**
+Link: https://harshitverma001.github.io/Excelsior
 
-## **1. Methodology**
+## **2. Methodology**
 
 1. Value is inserted in the cell
 2. Value can be cut, copied or pasted
@@ -35,7 +37,7 @@
 
 
 
-## **2. Description**
+## **3. Description**
 A completely offline JavaScript-based SpreadSheet program. It has been written with pure(stock) JS. No additional 3rd party API or framework/library has been used. I have commented on every major logic's code block in this program.
 
 It is designed in a way that it can automatically create 2600 cells(A-Z Columns and 1-100 Rows) and give a unique ID to each cell. Then this IDs have been used in the cell reference feature. It supports calculation from direct expression and cell reference and also supports all basic excel formulas(including 'if' formula). It supports value auto-update(re-calculation of all expressions whenever the user changes referenced data.)
@@ -43,7 +45,7 @@ It is designed in a way that it can automatically create 2600 cells(A-Z Columns 
 By default, this program automatically generates A-Z columns and 1-100 rows (2600 cells), but you can change it from inside the code. It also supports cell reference (eg '=a1+5' here a1 is referencing cell A1 ). It also supports formulas, I have tried to include all common formulas. So you will find most formulas predefined. But you can also create your own functions/formulas using native JavaScript code. In fact, not only formulas but also variables, arrays, objects, and almost anything can be created and used later.
 
 
-## **3. Input / Output**
+## **4. Input / Output**
 1. Case 1
 * Input - Value is added with no formula
 * Output - Value is shown in the cell
@@ -55,9 +57,6 @@ By default, this program automatically generates A-Z columns and 1-100 rows (260
 3. Case 3
 * Input - Value and formula both are added
 * Output - First, the value is shown in the cells. Then, formula is evaluated on these new values and corresponding cells gets updated
-
-## **4. Live link**
-Link: https://harshitverma001.github.io/Excelsior
 
 
 ## **5. Screenshot of the Interface**
